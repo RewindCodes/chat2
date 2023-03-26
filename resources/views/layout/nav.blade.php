@@ -9,6 +9,7 @@
                         <img alt="" class="logo-2" src="assets/images/logo/logo.png" width="50">
                         <img src="assets/images/logo/logo.png" class="logo-3" alt="logo">
                     </a>
+
                     <ul class="side-menu" style="margin-left: 9rem">
                         <li class="slide">
                             <a class="side-menu__item" data-bs-toggle="slide" href="#Pricing"><span
@@ -23,14 +24,25 @@
                                     class="side-menu__label">Faq's</span></a>
                         </li>
                     </ul>
+
                     <div class="header-nav-right d-none d-lg-flex">
-                        <a href=""
+                            @if (!Auth::check())
+                            <a href="{{route('showlogin')}}"
                             class="btn ripple btn-min w-sm btn-outline-primary me-2 my-auto d-lg-none d-xl-block d-block"
-                            target="_blank">Sign in
-                        </a>
-                        <a href="" class="btn ripple btn-min w-sm btn-primary me-2 my-auto d-lg-none d-xl-block d-block"
-                            target="_blank">Sign up
-                        </a>
+                            target="">Sign in
+                           </a>
+                           <a href="{{route('showregister')}}" class="btn ripple btn-min w-sm btn-primary me-2 my-auto d-lg-none d-xl-block d-block"
+                            target="">Sign up
+                             </a>
+                            @else
+                                  <a href="{{route('logout')}}" class="btn ripple btn-min w-sm btn-primary me-2 my-auto d-lg-none d-xl-block d-block"
+                                  target="">{{Auth::user()->name}}->logout
+                                 </a>
+                            @endif
+
+
+
+
                     </div>
                 </div>
             </div>
