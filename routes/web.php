@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\SocialiteController;
 use App\Http\Controllers\Auth\UserAuthController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -46,6 +47,15 @@ Route::group(['middleware'=>'UserAuthCheck'],function(){
         return view('pages.chat');
     })->name('chat');
 });
-
+// ======================================Socialite =====================
+//google//
+Route::get('google/redirect',[SocialiteController::class,'showGoogle'])->name('showGoogle');
+Route::get('google/callback',[SocialiteController::class,'google'])->name('google');
+//linkedin//
+Route::get('linkedin/redirect',[SocialiteController::class,'showLinkedin'])->name('showLinkedin');
+Route::get('linkedin/callback',[SocialiteController::class,'linkedin'])->name('linkedin');
+// //github//
+// Route::get('github/redirect',[SocialiteController::class,'showGithub'])->name('showGithub');
+// Route::get('github/callback',[SocialiteController::class,'github'])->name('github');
 
 

@@ -108,19 +108,19 @@
                                             </div>
                                             <label class="login-social-icon"><span>Login with Social</span></label>
                                             <div class="d-flex justify-content-center">
-                                                <a href="javascript:void(0)">
+                                                <a href="{{route('showGoogle')}}">
                                                     <div class="social-login me-4 text-center">
                                                         <i class="fa fa-google"></i>
                                                     </div>
                                                 </a>
-                                                <a href="javascript:void(0)">
+                                                <a href="{{route('showLinkedin')}}">
                                                     <div class="social-login me-4 text-center">
-                                                        <i class="fa fa-facebook"></i>
+                                                        <i class="fa fa-linkedin"></i>
                                                     </div>
                                                 </a>
-                                                <a href="javascript:void(0)">
+                                                <a href="{{route('showGithub')}}">
                                                     <div class="social-login text-center">
-                                                        <i class="fa fa-twitter"></i>
+                                                        <i class="fa fa-github"></i>
                                                     </div>
                                                 </a>
                                             </div>
