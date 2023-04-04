@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\SocialiteController;
 use App\Http\Controllers\Auth\UserAuthController;
 use App\Http\Controllers\Pages\ChatController;
 use App\Http\Controllers\Pages\PagelandingController;
+use App\Http\Controllers\Pages\UserDashboardController;
 use App\Http\Controllers\PracticeController;
 use App\Http\Controllers\Subscription\SubscriptionController;
 use Illuminate\Support\Facades\Auth;
@@ -49,6 +50,10 @@ Route::group(['middleware'=>'UserAuthCheck'],function(){
 
     Route::get('plans/checkout/{plan_id}',[SubscriptionController::class,'PlanCheckout'])->name('plan.checkout');
     Route::post('plans/process',[SubscriptionController::class,'PlanProcess'])->name('plan.process');
+    // ===========================user Dashboard==========================
+    Route::get('userdashboard',[UserDashboardController::class,'UserDashboard'])->name('user.dashboard');
+    Route::get('subcription/cancel',[UserDashboardController::class,'subcriptionCancel'])->name('subcription.cancel');
+    Route::get('subcription/resume',[UserDashboardController::class,'subcriptionResume'])->name('subcription.resume');
 
 
 });
