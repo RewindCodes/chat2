@@ -3,6 +3,10 @@
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\SocialiteController;
 use App\Http\Controllers\Auth\UserAuthController;
+use App\Http\Controllers\Pages\ChatController;
+use App\Http\Controllers\Pages\PagelandingController;
+use App\Http\Controllers\PracticeController;
+use App\Http\Controllers\Subscription\SubscriptionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // =============register===============//
+// Route:;redirect('/','login');
 
 Route::get('register',[UserAuthController::class,'viewregister'])->name('showregister');
 Route::post('register',[UserAuthController::class,'register'])->name('register');
@@ -38,14 +43,19 @@ Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPass
 
 
 // ==========================user Auth middleware======================
+Route::get('/',[PagelandingController::class,'pagelanding'])->name('home');
 Route::group(['middleware'=>'UserAuthCheck'],function(){
-    Route::get('/', function () {
-        return view('pages.landing');
-    });
 
-    Route::get('/chat', function () {
-        return view('pages.chat');
-    })->name('chat');
+
+    Route::get('plans/checkout/{plan_id}',[SubscriptionController::class,'PlanCheckout'])->name('plan.checkout');
+    Route::post('plans/process',[SubscriptionController::class,'PlanProcess'])->name('plan.process');
+
+
+});
+// ======================subcriber middleware=======================
+Route::group(['middleware'=>'Subscriber'],function(){
+    Route::get('/chat',[ChatController::class,'showchat'])->name('chat');
+
 });
 // ======================================Socialite =====================
 //google//
@@ -55,7 +65,7 @@ Route::get('google/callback',[SocialiteController::class,'google'])->name('googl
 Route::get('linkedin/redirect',[SocialiteController::class,'showLinkedin'])->name('showLinkedin');
 Route::get('linkedin/callback',[SocialiteController::class,'linkedin'])->name('linkedin');
 // //github//
-// Route::get('github/redirect',[SocialiteController::class,'showGithub'])->name('showGithub');
-// Route::get('github/callback',[SocialiteController::class,'github'])->name('github');
+Route::get('github/redirect',[SocialiteController::class,'showGithub'])->name('showGithub');
+Route::get('github/callback',[SocialiteController::class,'github'])->name('github');
 
 

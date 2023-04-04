@@ -34,7 +34,7 @@
                         <div class="">
 
                            @section('main')
-                               
+
                            @show
 
                         </div>

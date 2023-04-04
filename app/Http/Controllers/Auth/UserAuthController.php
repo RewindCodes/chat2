@@ -52,7 +52,7 @@ class UserAuthController extends Controller
         'email'=>request('email'),
         'password'=>request('password')
          ])){
-            return to_route('chat');
+            return to_route('home');
          }else{
             return redirect()->back()->with('error', 'not matched');
          }

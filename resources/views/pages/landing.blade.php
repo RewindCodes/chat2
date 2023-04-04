@@ -111,10 +111,10 @@
                                 <div class="col-lg-4 col-xl-4 col-md-8 col-sm-12">
                                     <div class="card p-3 pricing-card reveal revealrotate">
                                         <div class="card-header d-block text-justified pt-2">
-                                            <p class="fs-18 fw-semibold mb-1">Basic</p>
+                                            <p class="fs-18 fw-semibold mb-1">{{$basic_by_year->name}}</p>
                                             <p class="text-justify fw-semibold mb-1"> <span
                                                     class="fs-30 me-2">$</span><span
-                                                    class="fs-30 me-1">399</span><span
+                                                    class="fs-30 me-1">{{$basic_by_year->price}}</span><span
                                                     class="fs-25"><span
                                                         class="op-0-5 text-muted text-20">/</span>
                                                     year</span></p>
@@ -148,10 +148,10 @@
                                             </ul>
                                         </div>
                                         <div class="card-footer text-center border-top-0 pt-1">
-                                            <button
+                                            <a href="{{route('plan.checkout',$basic_by_year->plan_id)}}"
                                                 class="btn btn-lg btn-outline-secondary btn-block">
                                                 <span class="ms-4 me-4">Select</span>
-                                            </button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -159,12 +159,12 @@
                                     <div
                                         class="card p-3 border-primary pricing-card advanced reveal revealrotate">
                                         <div class="card-header d-block text-justified pt-2">
-                                            <p class="fs-18 fw-semibold mb-1 pe-0">Advanced<span
+                                            <p class="fs-18 fw-semibold mb-1 pe-0">{{$advanced_by_year->name}}<span
                                                     class="tag bg-primary text-white float-end">Limited
                                                     Deal</span></p>
                                             <p class="text-justify fw-semibold mb-1"> <span
                                                     class="fs-30 me-2">$</span><span
-                                                    class="fs-30 me-1">1,299</span><span
+                                                    class="fs-30 me-1">{{$advanced_by_year->price}}</span><span
                                                     class="fs-25"><span
                                                         class="op-0-5 text-muted text-20">/</span>
                                                     year</span></p>
@@ -198,20 +198,20 @@
                                             </ul>
                                         </div>
                                         <div class="card-footer text-center border-top-0 pt-1">
-                                            <button
-                                                class="btn btn-lg btn-primary-gradient text-white btn-block">
+                                            <a href="{{route('plan.checkout',$advanced_by_year->plan_id)}}"
+                                                class="btn btn-lg btn-outline-secondary btn-block">
                                                 <span class="ms-4 me-4">Select</span>
-                                            </button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-xl-4 col-md-8 col-sm-12">
                                     <div class="card p-3 pricing-card reveal revealrotate">
                                         <div class="card-header d-block text-justified pt-2">
-                                            <p class="fs-18 fw-semibold mb-1">Regular</p>
+                                            <p class="fs-18 fw-semibold mb-1">{{$regular_by_year->name}}</p>
                                             <p class="text-justify fw-semibold mb-1"> <span
                                                     class="fs-30 me-2">$</span><span
-                                                    class="fs-30 me-1">899</span><span
+                                                    class="fs-30 me-1">{{$regular_by_year->price}}</span><span
                                                     class="fs-25"><span
                                                         class="op-0-5 text-muted text-20">/</span>
                                                     year</span></p>
@@ -244,10 +244,10 @@
                                             </ul>
                                         </div>
                                         <div class="card-footer text-center border-top-0 pt-1">
-                                            <button
-                                                class="btn btn-lg btn-outline-danger btn-block">
+                                            <a href="{{route('plan.checkout',$regular_by_year->plan_id)}}"
+                                                class="btn btn-lg btn-outline-secondary btn-block">
                                                 <span class="ms-4 me-4">Select</span>
-                                            </button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -258,10 +258,10 @@
                                 <div class="col-lg-4 col-xl-4 col-md-8 col-sm-12">
                                     <div class="card p-3 pricing-card">
                                         <div class="card-header d-block text-justified pt-2">
-                                            <p class="fs-18 fw-semibold mb-1">Basic</p>
+                                            <p class="fs-18 fw-semibold mb-1">{{$basic_by_month->name}}</p>
                                             <p class="text-justify fw-semibold mb-1"> <span
                                                     class="fs-30 me-2">$</span><span
-                                                    class="fs-30 me-1">39</span><span
+                                                    class="fs-30 me-1">{{$basic_by_month->price}}</span><span
                                                     class="fs-25"><span
                                                         class="op-0-5 text-muted text-20">/</span>
                                                     month</span></p>
@@ -295,22 +295,22 @@
                                             </ul>
                                         </div>
                                         <div class="card-footer text-center border-top-0 pt-1">
-                                            <button
+                                            <a href="{{route('plan.checkout',$basic_by_month->plan_id)}}"
                                                 class="btn btn-lg btn-outline-secondary btn-block">
                                                 <span class="ms-4 me-4">Select</span>
-                                            </button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-xl-4 col-md-8 col-sm-12">
                                     <div class="card p-3 border-primary pricing-card advanced">
                                         <div class="card-header d-block text-justified pt-2">
-                                            <p class="fs-18 fw-semibold mb-1 pe-0">Advanced<span
+                                            <p class="fs-18 fw-semibold mb-1 pe-0">{{$advanced_by_month->name}}<span
                                                     class="tag bg-primary text-white float-end">Limited
                                                     Deal</span></p>
                                             <p class="text-justify fw-semibold mb-1"> <span
                                                     class="fs-30 me-2">$</span><span
-                                                    class="fs-30 me-1">199</span><span
+                                                    class="fs-30 me-1">{{$advanced_by_month->price}}</span><span
                                                     class="fs-25"><span
                                                         class="op-0-5 text-muted text-20">/</span>
                                                     month</span></p>
@@ -344,20 +344,20 @@
                                             </ul>
                                         </div>
                                         <div class="card-footer text-center border-top-0 pt-1">
-                                            <button
-                                                class="btn btn-lg btn-primary-gradient text-white btn-block">
+                                            <a href="{{route('plan.checkout',$advanced_by_month->plan_id)}}"
+                                                class="btn btn-lg btn-outline-secondary btn-block">
                                                 <span class="ms-4 me-4">Select</span>
-                                            </button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-xl-4 col-md-8 col-sm-12">
                                     <div class="card p-3 pricing-card">
                                         <div class="card-header d-block text-justified pt-2">
-                                            <p class="fs-18 fw-semibold mb-1">Regular</p>
+                                            <p class="fs-18 fw-semibold mb-1">{{$regular_by_month->name}}</p>
                                             <p class="text-justify fw-semibold mb-1"> <span
                                                     class="fs-30 me-2">$</span><span
-                                                    class="fs-30 me-1">69</span><span
+                                                    class="fs-30 me-1">{{$regular_by_month->price}}</span><span
                                                     class="fs-25"><span
                                                         class="op-0-5 text-muted text-20">/</span>
                                                     month</span></p>
@@ -390,10 +390,10 @@
                                             </ul>
                                         </div>
                                         <div class="card-footer text-center border-top-0 pt-1">
-                                            <button
-                                                class="btn btn-lg btn-outline-danger btn-block">
+                                            <a href="{{route('plan.checkout',$regular_by_month->plan_id)}}"
+                                                class="btn btn-lg btn-outline-secondary btn-block">
                                                 <span class="ms-4 me-4">Select</span>
-                                            </button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -555,6 +555,6 @@
     <!-- FAQ's CLOSED -->
 
 
-    
+
 
 @endsection
