@@ -5,6 +5,13 @@
     <div class="demo-screen-headline main-demo main-demo-1 spacing-top overflow-hidden reveal" id="home">
         <div class="container px-sm-0">
             <div class="row">
+                {{-- @if (\Session::has('message'))
+                           <div class="alert alert-danger">
+                              <ul>
+                                     <li>{!! \Session::get('message') !!}</li>
+                               </ul>
+                            </div>
+                         @endif --}}
                 <div class="col-xl-12 col-lg-12 mb-5 pb-5 animation-zidex pos-relative text-center">
                     <h4 class="fw-semibold mt-7">Effortlessly Communicate</h4>
                     <h1 class="fw-bold">Chat2 AI: Your Personal Conversational Assistant</h1>

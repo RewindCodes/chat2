@@ -38,7 +38,7 @@
                                   <a href="{{route('logout')}}" class="btn ripple btn-min w-sm btn-primary me-2 my-auto d-lg-none d-xl-block d-block"
                                   target="">{{Auth::user()->name}}->logout
                                  </a>
-                                    <a href=""  class="btn ripple btn-min w-sm btn-primary me-2 my-auto d-lg-none d-xl-block d-block">UserDashboard</a>
+                                    <a href="{{route('user.dashboard')}}"  class="btn ripple btn-min w-sm btn-primary me-2 my-auto d-lg-none d-xl-block d-block">UserDashboard</a>
                             @endif
 
 

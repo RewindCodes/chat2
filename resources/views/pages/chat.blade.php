@@ -13,10 +13,15 @@
                                 <div class="main-chat-body flex-2" id="ChatBody">
 
 
-
+                                      @foreach ( $messages as $message )
+                                          
+                                     
                                     <div class="content-inner">
-                                        <div class="media chat-left">
-                                            <div class="main-img-user online" style="width: 45px;height:45px;"><img alt="avatar" src="/assets/images/logo/logo.png"></div>
+                                        {{-- <div class="media chat-left">
+                                            <div class="main-img-user online" style="width: 45px;height:45px;">
+                                                <img alt="avatar" src="/assets/images/users/9.jpg">
+                                                
+                                            </div>
                                             <div class="media-body">
                                                 <div class="main-msg-wrapper">
                                                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. nazmul hossain babu
@@ -28,7 +33,10 @@
                                            
                                         </div>
                                         <div class="media chat-left">
-                                            <div class="main-img-user online"><img alt="avatar" src="../assets/images/users/9.jpg"></div>
+                                            <div class="main-img-user online">
+                                                <img alt="avatar" src="../assets/images/logo/logo.png">
+                                                
+                                            </div>
                                             <div class="media-body">
                                                 <div class="main-msg-wrapper">
                                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic aut nemo pariatur accusamus numquam necessitatibus! Quia error perferendis, quisquam earum dolore laboriosam, laudantium animi id provident, eveniet ut! Corporis, ullam.
@@ -37,10 +45,25 @@
                                                     <span>9:32 am</span> <a href="javascript:void(0)"><i class="icon ion-android-more-horizontal"></i></a>
                                                 </div>
                                             </div>
+                                        </div> --}}
+                                        <div class="ml-4">
+                                            <div class="text-lg">
+                                                @if ($message['role'] === 'assistant')
+                                                    <a href="#" class="font-medium text-gray-900">LaravelGPT</a>
+                                                @else
+                                                    <a href="#" class="font-medium text-gray-900">You</a>
+                                                @endif
+                                            </div>
+                                            <div class="mt-1">
+                                                <p class="text-gray-600">
+                                                    {!! \Illuminate\Mail\Markdown::parse($message['content']) !!}
+                                                </p>
+                                            </div>
                                         </div>
 
                                     </div>
 
+                                    @endforeach
                                 </div>
                                 {{-- main chat end  --}}
                                 <form action="" method="POST" id="message-form">

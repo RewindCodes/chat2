@@ -79,9 +79,10 @@
                                 <table class="table table-dark">
                                     <thead>
                                         <th>plan name</th>
-                                        <th>subs name</th>
+                                        {{-- <th>subs name</th> --}}
                                         <th>price</th>
                                         <th>quantity</th>
+                                        <th>billing_period</th>
                                         <th> started at</th>
                                         <th>auto renew</th>
                                     </thead>
@@ -93,9 +94,10 @@
 
                                         <tr>
                                             <td>{{ $sub->userplan->name}}</td>
-                                            <td>{{$sub->name}}</td>
+                                            {{-- <td>{{$sub->name}}</td> --}}
                                             <td>{{$sub->userplan->price}}</td>
                                             <td>{{$sub->quantity}}</td>
+                                            <td>{{$sub->userplan->billing_method}}</td>
                                             <td>{{$sub->created_at}}</td>
                                             <td>
                                                <!-- Rounded switch -->

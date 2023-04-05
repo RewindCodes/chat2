@@ -60,6 +60,7 @@ Route::group(['middleware'=>'UserAuthCheck'],function(){
 // ======================subcriber middleware=======================
 Route::group(['middleware'=>'Subscriber'],function(){
     Route::get('/chat',[ChatController::class,'showchat'])->name('chat');
+    Route::post('/chat',[ChatController::class,'chatting'])->name('chatting');
 
 });
 // ======================================Socialite =====================
