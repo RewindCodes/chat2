@@ -9,6 +9,10 @@ use Illuminate\Http\Request;
 class SubscriptionController extends Controller
 {
     public function PlanCheckout($plan_id){
+        // $user=auth()->user();
+        // if(!$user){
+        //     return redirect()->back()->with('message', 'login in first');
+        // }
         $plan=Plan::where('plan_id',$plan_id)->first();
 
         return view('subscription.checkout',[
