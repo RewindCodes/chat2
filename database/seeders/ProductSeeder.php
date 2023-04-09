@@ -38,12 +38,13 @@ class ProductSeeder extends Seeder
             'price'=>150
         ],
         [
-            'plan_id'=>'price_1MsoLLK5ZdmvG8t0HrXrwehn',
+            'plan_id'=>'price_1MsoMzK5ZdmvG8t0mShdrGVR',
             'name'=>'Basic',
             'billing_method'=>'month',
             'interval_count'=>1,
             'price'=>20
         ],
+
         [
             'plan_id'=>'price_1MsoMYK5ZdmvG8t0RjUul9G2',
             'name'=>'Advanced',
@@ -52,7 +53,7 @@ class ProductSeeder extends Seeder
             'price'=>80
         ],
         [
-            'plan_id'=>'price_1MsoMzK5ZdmvG8t0mShdrGVR',
+            'plan_id'=>'price_1MsoLLK5ZdmvG8t0HrXrwehn',
             'name'=>'Regular',
             'billing_method'=>'month',
             'interval_count'=>1,
@@ -60,7 +61,7 @@ class ProductSeeder extends Seeder
         ],
         ];
 
-        
+
         foreach($plan as $plans){
             ModelsPlan::create($plans);
         }

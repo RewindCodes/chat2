@@ -49,7 +49,7 @@ Route::group(['middleware'=>'UserAuthCheck'],function(){
 
 
     Route::get('plans/checkout/{plan_id}',[SubscriptionController::class,'PlanCheckout'])->name('plan.checkout');
-    Route::post('plans/process',[SubscriptionController::class,'PlanProcess'])->name('plan.process');
+    Route::post('plans/process/{id}',[SubscriptionController::class,'PlanProcess'])->name('plan.process');
     // ===========================user Dashboard==========================
     Route::get('userdashboard',[UserDashboardController::class,'UserDashboard'])->name('user.dashboard');
     Route::get('subcription/cancel',[UserDashboardController::class,'subcriptionCancel'])->name('subcription.cancel');
