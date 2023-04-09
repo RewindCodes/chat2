@@ -12,6 +12,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
+use Illuminate\Support\Facades\Auth;
 use OpenAI\Laravel\Facades\OpenAI;
 use Laravel\Cashier\Subscription;
 
@@ -23,13 +24,13 @@ class ChatController extends Controller
     {
         // $plan=Subscription::with('userplan')->where('user_id',auth()->id())->get();
         // $userplan=$plan->::all();
-       
 
-       
-        
-       
+
+
+
+
         $messages = collect(session('messages', []))->reject(fn ($message) => $message['role'] === 'system');
-            
+
         return view('pages/chat',[
             'messages' => $messages
         ]);
@@ -38,9 +39,15 @@ class ChatController extends Controller
     public function chatting(Request $request)
     {
         // $subscription=Subscription::where('user_id',auth()->id())->get();
-        
-        
-      
+
+
+        $user=Auth::user()->plan_name;
+
+        if($user=='Basic'){
+
+        }else if($user=='Advanced'){
+
+        }
 
         $messages = $request->session()->get('messages', [
             ['role' => 'system', 'content' => 'You are LaravelGPT - A ChatGPT clone. Answer as concisely as possible.']
@@ -48,6 +55,7 @@ class ChatController extends Controller
 
         $messages[] = ['role' => 'user', 'content' => $request->input('message')];
         $response = OpenAI::chat()->create([
+              
             'model' => 'gpt-3.5-turbo',
             'messages' => $messages
         ]);
@@ -58,7 +66,7 @@ class ChatController extends Controller
         return redirect('/chat');
     }
 
-   
+
 
 }
 
