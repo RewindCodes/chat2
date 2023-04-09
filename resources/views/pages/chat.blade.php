@@ -14,13 +14,13 @@
 
 
                                       @foreach ( $messages as $message )
-                                          
-                                     
+
+
                                     <div class="content-inner">
                                         {{-- <div class="media chat-left">
                                             <div class="main-img-user online" style="width: 45px;height:45px;">
                                                 <img alt="avatar" src="/assets/images/users/9.jpg">
-                                                
+
                                             </div>
                                             <div class="media-body">
                                                 <div class="main-msg-wrapper">
@@ -30,12 +30,12 @@
                                                     <span>9:32 am</span> <a href="javascript:void(0)"><i class="icon ion-android-more-horizontal"></i></a>
                                                 </div>
                                             </div>
-                                           
+
                                         </div>
                                         <div class="media chat-left">
                                             <div class="main-img-user online">
                                                 <img alt="avatar" src="../assets/images/logo/logo.png">
-                                                
+
                                             </div>
                                             <div class="media-body">
                                                 <div class="main-msg-wrapper">
@@ -66,13 +66,13 @@
                                     @endforeach
                                 </div>
                                 {{-- main chat end  --}}
-                                <form action="" method="POST" id="message-form">
+                                <form action="{{route('chatting')}}" method="POST" id="message-form">
                                     {{@csrf_field()}}
                                 <div class="main-chat-footer">
 
                                     <input class="form-control" name="message" placeholder="Type your message here..." type="text">
                                     {{-- <a class="nav-link" data-bs-toggle="tooltip" href="javascript:void(0)" title="Attach a File"><i class="fe fe-paperclip"></i></a> --}}
-                                    <button type="submit" class="btn btn-icon  btn-primary brround"><i class="fa fa-paper-plane-o"></i></button>
+                                    <button type="submit" id="submit" class="btn btn-icon  btn-primary brround"><i class="fa fa-paper-plane-o"></i></button>
                                     <nav class="nav">
                                     </nav>
 
@@ -85,12 +85,26 @@
             </div>
         </div>
     </div>
-    {{-- data submit form start --}}
+
 
     {{-- data submit form end --}}
     <!-- About CLOSED -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script>
+    //  $(document).ready(function(){
+    //     $('#message-form').submit(function(){
+    //         $.ajax({
+    //             url:'{{ route('chatting')}}',
+    //                 data:{subscriptionName},
+    //                 type:"POST",
+    //                 success:function(response){
+    //                   console.log(response);
+    //                 },
+    //                 error:function(response){
 
+    //                 }
+    //         });
+    //     });
+    //  })
     </script>
 @endsection

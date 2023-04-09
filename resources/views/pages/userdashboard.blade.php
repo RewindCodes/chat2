@@ -88,13 +88,9 @@
                                     </thead>
                                     <tbody>
                                         @forelse ($subscription as $sub)
-
-
-
-
                                         <tr>
                                             <td>{{ $sub->userplan->name}}</td>
-                                            {{-- <td>{{$sub->name}}</td> --}}
+                                           
                                             <td>{{$sub->userplan->price}}</td>
                                             <td>{{$sub->quantity}}</td>
                                             <td>{{$sub->userplan->billing_method}}</td>
@@ -168,3 +164,4 @@
     });
     </script>
 @endsection
+

@@ -35,6 +35,7 @@
         }
     </style>
     <div class="container mt-5">
+        @include('errors')
         <div class="card p-3">
             <div class="card-head">
                 <div style="float: left"><span><b>your plan name: </b>{{ $plan->name }}</span> </div>
@@ -42,11 +43,15 @@
                         </b>{{ $plan->price }}</span><br> </div>
             </div>
             <div class="card-body">
-                <form action="{{ route('plan.process') }}" method="POST" id="subscribe-form">
+                <form action="{{ route('plan.process',$user->id)}}" method="POST" id="subscribe-form">
                     @csrf
                     <label for="card-holder-name">Card Holder Name</label>
                     <input id="card-holder-name" type="text" class="form-control">
                     <input id="" type="hidden" name="plan_id" value="{{ $plan->plan_id }}"
+                        class="form-control">
+                    <input id="" type="hidden" name="plan_name" value="{{ $plan->name }}"
+                        class="form-control">
+                    <input id="" type="hidden" name="billing_period" value="{{ $plan->billing_method }}"
                         class="form-control">
 
                     <div class="form-row">
@@ -73,6 +78,7 @@
         </div>
     </div>
     {{-- ------------------------------------- end form ------------------------------------ --}}
+    {{-- <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script> --}}
 
     <script src="https://js.stripe.com/v3/"></script>
     <script>

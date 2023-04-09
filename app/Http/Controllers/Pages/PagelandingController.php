@@ -19,7 +19,7 @@ class PagelandingController extends Controller
          $regular_by_year=Plan::where('billing_method','year')->where('name','Regular')->first();
 
 
-
+        //    $user=auth()->user();
 
 
 

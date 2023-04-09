@@ -3593,16 +3593,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v10.12.0",
+            "version": "v10.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "ef2b761e4c69de59892c95d0453e2caa25162faf"
+                "reference": "9e8055d55e8212ad844f48d7cf525b630689be35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://repo.huaweicloud.com/repository/php/stripe/stripe-php/v10.12.0/stripe-stripe-php-v10.12.0.zip",
-                "reference": "ef2b761e4c69de59892c95d0453e2caa25162faf",
+                "url": "https://repo.huaweicloud.com/repository/php/stripe/stripe-php/v10.12.1/stripe-stripe-php-v10.12.1.zip",
+                "reference": "9e8055d55e8212ad844f48d7cf525b630689be35",
                 "shasum": ""
             },
             "require": {
@@ -3645,7 +3645,7 @@
                 "payment processing",
                 "stripe"
             ],
-            "time": "2023-03-30T20:27:06+00:00"
+            "time": "2023-04-04T19:13:21+00:00"
         },
         {
             "name": "symfony/console",
