@@ -78,13 +78,13 @@
 
                                 <table class="table table-dark">
                                     <thead>
-                                        <th>plan name</th>
+                                        <th>Plan name</th>
                                         {{-- <th>subs name</th> --}}
-                                        <th>price</th>
-                                        <th>quantity</th>
-                                        <th>billing_period</th>
-                                        <th> started at</th>
-                                        <th>auto renew</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Billing Period</th>
+                                        <th>Started at</th>
+                                        <th>Auto Renew</th>
                                     </thead>
                                     <tbody>
                                         @forelse ($subscription as $sub)

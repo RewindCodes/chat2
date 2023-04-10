@@ -43,7 +43,7 @@ class ChatController extends Controller
       
 
         $messages = $request->session()->get('messages', [
-            ['role' => 'system', 'content' => 'You are LaravelGPT - A ChatGPT clone. Answer as concisely as possible.']
+            ['role' => 'system', 'content' => 'You are Chat2 - A ChatGPT clone. Answer as concisely as possible.']
         ]);
 
         $messages[] = ['role' => 'user', 'content' => $request->input('message')];
