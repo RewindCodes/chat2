@@ -13016,6 +13016,10 @@ div.dataTables_wrapper div.dataTables_filter input {
     color: #495057;
 }
 
+.custom-switch-input:checked~.custom-switch-indicator {
+    background: #21af08 !important;
+}
+
 .custom-switches-stacked {
     display: -ms-flexbox;
     display: flex;
@@ -13031,7 +13035,7 @@ div.dataTables_wrapper div.dataTables_filter input {
     display: inline-block;
     height: 1.25rem;
     width: 2.25rem;
-    background: var(--primary005);
+    background: indianred;
     border-radius: 50px;
     position: relative;
     vertical-align: bottom;

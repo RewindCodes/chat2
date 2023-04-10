@@ -35,10 +35,10 @@
                             target="">Sign up
                              </a>
                             @else
-                                  <a href="{{route('logout')}}" class="btn ripple btn-min w-sm btn-primary me-2 my-auto d-lg-none d-xl-block d-block"
-                                  target="">{{Auth::user()->name}}->logout
-                                 </a>
-                                    <a href="{{route('user.dashboard')}}"  class="btn ripple btn-min w-sm btn-primary me-2 my-auto d-lg-none d-xl-block d-block">UserDashboard</a>
+                            <a href="{{route('user.dashboard')}}"  class="btn ripple btn-min w-sm btn-outline-default me-2 my-auto d-lg-none d-xl-block d-block">Dashboard</a>
+                            <a href="{{route('logout')}}" class="btn ripple btn-min w-sm btn-primary me-2 my-auto d-lg-none d-xl-block d-block"
+                                  target="">Logout
+                            </a>
                             @endif
 
 

@@ -22,12 +22,20 @@
                     <div class="collapse navbar-collapse bg-white px-0" id="navbarSupportedContent-4">
                         <!-- SEARCH -->
                         <div class="header-nav-right p-5">
-                            <a href="register.html" class="btn ripple btn-min w-sm btn-outline-primary me-2 my-auto"
-                                target="_blank">New User
+                            @if (!Auth::check())
+                            <a href="{{route('showlogin')}}"
+                            class="btn ripple btn-min w-sm btn-outline-primary me-2 my-auto d-lg-none d-xl-block d-block"
+                            target="">Sign in
+                           </a>
+                           <a href="{{route('showregister')}}" class="btn ripple btn-min w-sm btn-primary me-2 my-auto d-lg-none d-xl-block d-block"
+                            target="">Sign up
+                             </a>
+                            @else
+                            <a href="{{route('user.dashboard')}}"  class="btn ripple btn-min w-sm btn-outline-default me-2 my-auto d-lg-none d-xl-block d-block">Dashboard</a>
+                            <a href="{{route('logout')}}" class="btn ripple btn-min w-sm btn-primary me-2 my-auto d-lg-none d-xl-block d-block"
+                                  target="">Logout
                             </a>
-                            <a href="login.html" class="btn ripple btn-min w-sm btn-primary me-2 my-auto"
-                                target="_blank">Login
-                            </a>
+                            @endif
                         </div>
                     </div>
                 </div>

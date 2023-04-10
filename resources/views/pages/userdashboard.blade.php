@@ -71,12 +71,12 @@
         <div class="container" style="width: 700px !important">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="card">
+                    <div class="card mt-7">
                         <div class="main-content-app pt-0">
                             <div class="main-content-body main-content-body-chat h-100">
 
 
-                                <table class="table table-dark">
+                                <table class="table table-dark" style="border-radius: 8px">
                                     <thead>
                                         <th>Plan name</th>
                                         {{-- <th>subs name</th> --}}
@@ -94,29 +94,24 @@
                                             <td>{{$sub->userplan->price}}</td>
                                             <td>{{$sub->quantity}}</td>
                                             <td>{{$sub->userplan->billing_method}}</td>
-                                            <td>{{$sub->created_at}}</td>
+                                            <td>{{$sub->created_at->diffForHumans()}}</td>
                                             <td>
                                                <!-- Rounded switch -->
-                                        <label class="switch">
-                                    @if ($sub->ends_at ==null)
-                                    <input id="checkbox" type="checkbox" checked value="{{$sub->name}}">
-                                    @else
-                                    <input id="checkbox" type="checkbox" value="{{$sub->name}}">
-                                    @endif
-                                    <span class="slider round"></span>
-                                  </label>
-                                              </td>
+                                                <label class="custom-switch m-0">
+                                                    @if ($sub->ends_at ==null)
+                                                    <input id="checkbox" type="checkbox" class="custom-switch-input" checked value="{{$sub->name}}">
+                                                    @else
+                                                    <input id="checkbox" type="checkbox" class="custom-switch-input" value="{{$sub->name}}">
+                                                    @endif
+                                                    <span class="custom-switch-indicator"></span>
+                                                </label>
+                                            </td>
                                         </tr>
                                         @empty
                                         <td colspan="6" class="text-center">No data !</td>
                                         @endforelse
                                     </tbody>
                                 </table>
-
-
-
-
-
                             </div>
                         </div>
                     </div>

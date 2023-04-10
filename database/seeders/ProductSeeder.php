@@ -19,28 +19,28 @@ class ProductSeeder extends Seeder
         [
             'plan_id'=>'price_1MsoPPK5ZdmvG8t0llmitJ8g',
             'name'=>'Regular',
-            'billing_method'=>'year',
+            'billing_method'=>'Yearly',
             'interval_count'=>1,
             'price'=>200
         ],
         [
             'plan_id'=>'price_1MsoOnK5ZdmvG8t0maAf8dSm',
             'name'=>'Advanced',
-            'billing_method'=>'year',
+            'billing_method'=>'Yearly',
             'interval_count'=>1,
             'price'=>300
         ],
         [
             'plan_id'=>'price_1MsoNjK5ZdmvG8t0Dzhv991N',
             'name'=>'Basic',
-            'billing_method'=>'year',
+            'billing_method'=>'Yearly',
             'interval_count'=>1,
             'price'=>150
         ],
         [
             'plan_id'=>'price_1MsoMzK5ZdmvG8t0mShdrGVR',
             'name'=>'Basic',
-            'billing_method'=>'month',
+            'billing_method'=>'Monthly',
             'interval_count'=>1,
             'price'=>20
         ],
@@ -48,14 +48,14 @@ class ProductSeeder extends Seeder
         [
             'plan_id'=>'price_1MsoMYK5ZdmvG8t0RjUul9G2',
             'name'=>'Advanced',
-            'billing_method'=>'month',
+            'billing_method'=>'Monthly',
             'interval_count'=>1,
             'price'=>80
         ],
         [
             'plan_id'=>'price_1MsoLLK5ZdmvG8t0HrXrwehn',
             'name'=>'Regular',
-            'billing_method'=>'month',
+            'billing_method'=>'Monthly',
             'interval_count'=>1,
             'price'=>50
         ],
