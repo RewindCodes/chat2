@@ -7,15 +7,16 @@
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Sash – Bootstrap 5  Admin & Dashboard Template">
-    <meta name="author" content="Spruko Technologies Private Limited">
-    <meta name="keywords" content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit.">
+    <meta name="description" content="Chat2">
+    <meta name="author" content="Rewind Codes Technologies Inc.">
+    <meta name="keywords"
+        content="OpenAI chat, ChatGPT, GPT-3, GPT-4">
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('/assets/images/brand/favicon.ico')}}" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/favicon.ico" />
 
     <!-- TITLE -->
-    <title>Chat2registration</title>
+    <title>Register</title>
 
     <!-- BOOTSTRAP CSS -->
     <link id="style" href="{{asset('/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
@@ -39,20 +40,14 @@
     <!-- BACKGROUND-IMAGE -->
     <div class="">
 
-        <!-- GLOABAL LOADER -->
-        <div id="global-loader">
-            {{-- <img src="{{asset('../assets/images/loader.svg')}}" class="loader-img" alt="Loader"> --}}
-        </div>
-        <!-- /GLOABAL LOADER -->
-
         <!-- PAGE -->
-        <div class="page">
+        <div class="page" style="background-color: #f5f5f5">
             <div class="">
 
                 <!-- CONTAINER OPEN -->
                 <div class="col col-login mx-auto mt-7">
                     <div class="text-center">
-                        <a href="index.html"><img src="{{asset('assets/images/brand/logo-white.png')}}" class="header-brand-img m-0" alt=""></a>
+                        <a href="index.html"><img src="{{asset('assets/images/logo/logo.png')}}" style="width: 66px" class="header-brand-img m-0" alt=""></a>
                     </div>
                 </div>
                 <div class="container-login100">
@@ -87,7 +82,7 @@
 								</label> --}}
                             <div class="container-login100-form-btn">
 
-                                    <input type="submit" value="register" class="login100-form-btn btn-primary">
+                                    <input type="submit" value="Sign up" class="login100-form-btn btn-primary">
                             </div>
                             <div class="text-center pt-3">
                                 <p class="text-dark mb-0">Already have account?<a href="{{route('showlogin')}}" class="text-primary ms-1">Sign In</a></p>
