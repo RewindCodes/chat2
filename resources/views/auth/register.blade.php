@@ -33,6 +33,11 @@
     <!-- COLOR SKIN CSS -->
     <link id="theme" rel="stylesheet" type="text/css" media="all" href="{{asset('/assets/colors/color1.css')}}" />
 
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="app sidebar-mini ltr login-img">
@@ -47,7 +52,7 @@
                 <!-- CONTAINER OPEN -->
                 <div class="col col-login mx-auto mt-7">
                     <div class="text-center">
-                        <a href="index.html"><img src="{{asset('assets/images/logo/logo.png')}}" style="width: 66px" class="header-brand-img m-0" alt=""></a>
+                        <a href="{{ route('home') }}"><img src="{{asset('assets/images/logo/logo.png')}}" style="width: 66px" class="header-brand-img m-0" alt=""></a>
                     </div>
                 </div>
                 <div class="container-login100">
@@ -85,23 +90,23 @@
                                     <input type="submit" value="Sign up" class="login100-form-btn btn-primary">
                             </div>
                             <div class="text-center pt-3">
-                                <p class="text-dark mb-0">Already have account?<a href="{{route('showlogin')}}" class="text-primary ms-1">Sign In</a></p>
+                                <p class="text-dark mb-0">Already have account?<a href="{{route('showlogin')}}" class="text-primary ms-1"><b>Sign In</b></a></p>
                             </div>
                             <label class="login-social-icon"><span>Register with Social</span></label>
                             <div class="d-flex justify-content-center">
-                                <a href="javascript:void(0)">
+                                <a href="{{route('showGoogle')}}">
                                     <div class="social-login me-4 text-center">
                                         <i class="fa fa-google"></i>
                                     </div>
                                 </a>
-                                <a href="javascript:void(0)">
+                                <a href="{{route('showLinkedin')}}">
                                     <div class="social-login me-4 text-center">
-                                        <i class="fa fa-facebook"></i>
+                                        <i class="fa fa-linkedin"></i>
                                     </div>
                                 </a>
-                                <a href="javascript:void(0)">
+                                <a href="{{route('showGithub')}}">
                                     <div class="social-login text-center">
-                                        <i class="fa fa-twitter"></i>
+                                        <i class="fa fa-github"></i>
                                     </div>
                                 </a>
                             </div>

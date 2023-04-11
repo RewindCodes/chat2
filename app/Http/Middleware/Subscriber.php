@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
 class Subscriber
@@ -18,7 +19,7 @@ class Subscriber
     {
 
 
-        if ($request->user() && ! $request->user()->subscribed('default')) {
+        if (!Auth::check() && !$request->user()->subscribed('default')) {
             // This user is not a paying customer...
             return to_route('home');
         }else{

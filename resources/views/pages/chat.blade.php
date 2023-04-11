@@ -67,11 +67,10 @@
                                 </div>
                                 {{-- main chat end  --}}
                                 <form action="{{route('chatting')}}" method="POST" id="message-form">
-                                    {{@csrf_field()}}
+                                    @csrf
                                 <div class="main-chat-footer">
 
                                     <input class="form-control" name="message" placeholder="Type your message here..." type="text">
-                                    {{-- <a class="nav-link" data-bs-toggle="tooltip" href="javascript:void(0)" title="Attach a File"><i class="fe fe-paperclip"></i></a> --}}
                                     <button type="submit" id="submit" class="btn btn-icon  btn-primary brround"><i class="fa fa-paper-plane-o"></i></button>
                                     <nav class="nav">
                                     </nav>

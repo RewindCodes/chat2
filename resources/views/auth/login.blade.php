@@ -33,6 +33,11 @@
     <!-- COLOR SKIN CSS -->
     <link id="theme" rel="stylesheet" type="text/css" media="all" href="{{asset('/assets/colors/color1.css')}}" />
 
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="app sidebar-mini ltr login-img">
@@ -47,7 +52,7 @@
                 <!-- CONTAINER OPEN -->
                 <div class="col col-login mx-auto mt-7">
                     <div class="text-center">
-                        <a href="index.html"><img src="{{asset('assets/images/logo/logo.png')}}" style="width: 66px" class="header-brand-img" alt=""></a>
+                        <a href="{{ route('home') }}"><img src="{{asset('assets/images/logo/logo.png')}}" style="width: 66px" class="header-brand-img" alt=""></a>
                     </div>
                 </div>
 
@@ -91,7 +96,7 @@
                                                 <input type="submit" value="Login" class="login100-form-btn btn-primary" >
                                             </div>
                                             <div class="text-center pt-3">
-                                                <p class="text-dark mb-0">Not a member?<a href="{{route('showregister')}}" class="text-primary ms-1">Sign up</a></p>
+                                                <p class="text-dark mb-0">Not a member?<a href="{{route('showregister')}}" class="text-primary ms-1"><strong>Sign up</strong></a></p>
                                             </div>
                                             <label class="login-social-icon"><span>Login with Social</span></label>
                                             <div class="d-flex justify-content-center">

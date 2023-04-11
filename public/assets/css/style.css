@@ -230,6 +230,7 @@ section {
     display: block;
 }
 
+
 body {
     margin: 0;
     font-family: "Figtree", sans-serif;
@@ -62370,7 +62371,7 @@ ul {
     -ms-flex-align: center;
     align-items: center;
     padding: 8px 8px;
-    font-size: 13.3px;
+    font-size: 16px;
     color: #74829c;
     white-space: nowrap;
 }

@@ -71,7 +71,7 @@ class SocialiteController extends Controller
     {
     $user = Socialite::driver('github')->user();
     $userEmail = $user->getEmail();
-    dd($user);
+    // dd($user);
     $userName = strtolower(implode('_',explode(' ',$user->getName())));
 
     $getUser = \App\Models\User::where('email',$userEmail)->first();

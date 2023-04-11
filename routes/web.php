@@ -43,11 +43,17 @@ Route::get('reset-password/{token}',[ForgotPasswordController::class, 'showReset
 Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
 
-// ==========================user Auth middleware======================
+// ======================General Pages==========================
 Route::get('/',[PagelandingController::class,'pagelanding'])->name('home');
+Route::get('/pricing',[PagelandingController::class,'pricingPage'])->name('pricing.page');
+Route::get('/about',[PagelandingController::class,'aboutPage'])->name('about.page');
+Route::get('/faqs',[PagelandingController::class,'faqPage'])->name('faq.page');
+Route::get('/contact',[PagelandingController::class,'contactPage'])->name('contact.page');
+
+
+// ==========================user Auth middleware======================
+
 Route::group(['middleware'=>'UserAuthCheck'],function(){
-
-
     Route::get('plans/checkout/{plan_id}',[SubscriptionController::class,'PlanCheckout'])->name('plan.checkout');
     Route::post('plans/process/{id}',[SubscriptionController::class,'PlanProcess'])->name('plan.process');
     // ===========================user Dashboard==========================
@@ -55,14 +61,20 @@ Route::group(['middleware'=>'UserAuthCheck'],function(){
     Route::get('subcription/cancel',[UserDashboardController::class,'subcriptionCancel'])->name('subcription.cancel');
     Route::get('subcription/resume',[UserDashboardController::class,'subcriptionResume'])->name('subcription.resume');
 
-
-});
-// ======================subcriber middleware=======================
+    // ======================subcriber middleware=======================
 Route::group(['middleware'=>'Subscriber'],function(){
     Route::get('/chat',[ChatController::class,'showchat'])->name('chat');
     Route::post('/chat',[ChatController::class,'chatting'])->name('chatting');
+    Route::get('reset',[ChatController::class,'destroy'])->name('chat.reset');
 
 });
+
+});
+
+
+
+
+
 // ======================================Socialite =====================
 //google//
 Route::get('google/redirect',[SocialiteController::class,'showGoogle'])->name('showGoogle');

@@ -67,6 +67,14 @@ class ChatController extends Controller
     }
 
 
+    public function destroy(Request $request): Application|Redirector|RedirectResponse|ApplicationContract
+    {
+        $request->session()->forget('messages');
+
+        return redirect('/chat');
+    }
+
+
 
 }
 
