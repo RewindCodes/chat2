@@ -43,7 +43,7 @@
                             <a href="{{route('logout')}}" class="btn ripple btn-min w-sm btn-primary me-2 my-auto d-lg-none d-xl-block d-block"
                                   target="">Logout
                             </a>
-                            <a href="{{route('logout')}}" class="btn btn-icon  btn-primary brround" title="Start Chat"><i class="fa fa-commenting"></i>
+                            <a href="{{route('chat')}}" class="btn btn-icon  btn-primary brround" title="Start Chat"><i class="fa fa-commenting" style="font-size: 18px; padding-top:2px"></i>
                             </a>
                             @endif
 

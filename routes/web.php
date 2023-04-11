@@ -51,6 +51,8 @@ Route::get('/faqs',[PagelandingController::class,'faqPage'])->name('faq.page');
 Route::get('/contact',[PagelandingController::class,'contactPage'])->name('contact.page');
 
 
+
+
 // ==========================user Auth middleware======================
 
 Route::group(['middleware'=>'UserAuthCheck'],function(){
@@ -66,6 +68,7 @@ Route::group(['middleware'=>'Subscriber'],function(){
     Route::get('/chat',[ChatController::class,'showchat'])->name('chat');
     Route::post('/chat',[ChatController::class,'chatting'])->name('chatting');
     Route::get('reset',[ChatController::class,'destroy'])->name('chat.reset');
+    Route::get('/messages', [ChatController::class, 'getMessages'])->name('get-messages');
 
 });
 

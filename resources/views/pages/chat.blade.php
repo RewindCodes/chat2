@@ -1,5 +1,6 @@
 @extends('layout.app')
 @section('main')
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <!-- About -->
     <div class="" style="padding-bottom: 5rem" id="">
         <div class="container" style="width: 700px !important">
@@ -10,60 +11,8 @@
                             <div class="main-content-body main-content-body-chat h-100">
 
                                 <!-- main-chat-header -->
-                                <div class="main-chat-body flex-2" id="ChatBody">
-
-
-                                      @foreach ( $messages as $message )
-
-
-                                    <div class="content-inner">
-                                        {{-- <div class="media chat-left">
-                                            <div class="main-img-user online" style="width: 45px;height:45px;">
-                                                <img alt="avatar" src="/assets/images/users/9.jpg">
-
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="main-msg-wrapper">
-                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. nazmul hossain babu
-                                                </div>
-                                                <div>
-                                                    <span>9:32 am</span> <a href="javascript:void(0)"><i class="icon ion-android-more-horizontal"></i></a>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="media chat-left">
-                                            <div class="main-img-user online">
-                                                <img alt="avatar" src="../assets/images/logo/logo.png">
-
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="main-msg-wrapper">
-                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic aut nemo pariatur accusamus numquam necessitatibus! Quia error perferendis, quisquam earum dolore laboriosam, laudantium animi id provident, eveniet ut! Corporis, ullam.
-                                                </div>
-                                                <div>
-                                                    <span>9:32 am</span> <a href="javascript:void(0)"><i class="icon ion-android-more-horizontal"></i></a>
-                                                </div>
-                                            </div>
-                                        </div> --}}
-                                        <div class="ml-4">
-                                            <div class="text-lg">
-                                                @if ($message['role'] === 'assistant')
-                                                    <a href="#" class="font-medium text-gray-900">LaravelGPT</a>
-                                                @else
-                                                    <a href="#" class="font-medium text-gray-900">You</a>
-                                                @endif
-                                            </div>
-                                            <div class="mt-1">
-                                                <p class="text-gray-600">
-                                                    {!! \Illuminate\Mail\Markdown::parse($message['content']) !!}
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    @endforeach
+                                <div class="main-chat-body flex-2" id="ChatBody" style="font-size: 16px">
+                                    <!-- existing messages -->
                                 </div>
                                 {{-- main chat end  --}}
                                 <form action="{{route('chatting')}}" method="POST" id="message-form">
@@ -71,7 +20,7 @@
                                 <div class="main-chat-footer">
 
                                     <input class="form-control" name="message" placeholder="Type your message here..." type="text">
-                                    <button type="submit" id="submit" class="btn btn-icon  btn-primary brround"><i class="fa fa-paper-plane-o"></i></button>
+                                    <button type="submit" id="submit" class="btn btn-icon  btn-primary brround" ><i class="fa fa-paper-plane-o"></i><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none"></span></button>
                                     <nav class="nav">
                                     </nav>
 
@@ -88,22 +37,35 @@
 
     {{-- data submit form end --}}
     <!-- About CLOSED -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script>
-    //  $(document).ready(function(){
-    //     $('#message-form').submit(function(){
-    //         $.ajax({
-    //             url:'{{ route('chatting')}}',
-    //                 data:{subscriptionName},
-    //                 type:"POST",
-    //                 success:function(response){
-    //                   console.log(response);
-    //                 },
-    //                 error:function(response){
-
-    //                 }
-    //         });
-    //     });
-    //  })
+        $(function() {
+            // submit message form via AJAX
+            $('#message-form').submit(function(e) {
+                e.preventDefault();
+                var $form = $(this);
+                $.ajax({
+                    url: $form.attr('action'),
+                    type: $form.attr('method'),
+                    data: $form.serialize(),
+                    success: function(data) {
+                        // clear input field and focus it for next message
+                        $form.find('input[name=message]').val('').focus();
+                    }
+                });
+            });
+    
+            // periodically check for new messages via AJAX
+            setInterval(function() {
+                $.ajax({
+                    url: "{{ route('get-messages') }}",
+                    success: function(data) {
+                        $('#ChatBody').html(data);
+                    }
+                });
+            }, 5000); // every 5 seconds
+        });
     </script>
 @endsection
+
+
+

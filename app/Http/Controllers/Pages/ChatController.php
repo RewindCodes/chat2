@@ -20,6 +20,12 @@ use Laravel\Cashier\Subscription;
 class ChatController extends Controller
 {
 
+    public function getMessages(Request $request)
+{
+    $messages = collect(session('messages', []))->reject(fn ($message) => $message['role'] === 'system');
+    return view('partials/chat-messages', ['messages' => $messages]);
+}
+
     public function showchat()
     {
         // $plan=Subscription::with('userplan')->where('user_id',auth()->id())->get();
