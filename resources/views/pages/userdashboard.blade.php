@@ -91,7 +91,7 @@
                                         <tr>
                                             <td>{{ $sub->userplan->name}}</td>
                                            
-                                            <td>{{$sub->userplan->price}}</td>
+                                            <td>${{$sub->userplan->price}}</td>
                                             <td>{{$sub->quantity}}</td>
                                             <td>{{$sub->userplan->billing_method}}</td>
                                             <td>{{$sub->created_at->diffForHumans()}}</td>
