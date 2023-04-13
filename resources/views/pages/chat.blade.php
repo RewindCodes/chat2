@@ -11,7 +11,10 @@
                             <div class="main-content-body main-content-body-chat h-100">
 
                                 <!-- main-chat-header -->
-                                @if(!isset($messages) || count($messages) === 0)
+                                
+                                <div class="main-chat-body flex-2" id="ChatBody" style="font-size: 16px">
+                                    <!-- existing messages -->
+                                    @if(!isset($messages) || count($messages) === 0)
                                     <div class="text-center">
                                         <h3 class="text-gray">Chat2</h3>
                                         <p>Write your messages and start chatting!</p>
@@ -24,16 +27,13 @@
                                         <div class="main-msg-wrapper copy-div" style="cursor: pointer; background: rgb(92, 92, 92); color:white;">Clear</div>
                                     </div>
                                     @endif
-                                <div class="main-chat-body flex-2" id="ChatBody" style="font-size: 16px">
-                                    <!-- existing messages -->
-                                    
                                 </div>
                                 {{-- main chat end  --}}
                                 <form action="{{route('chatting')}}" method="POST" id="message-form">
                                     @csrf
                                 <div class="main-chat-footer">
 
-                                    <input class="form-control" name="message" placeholder="Type your message here..." type="text" id="copy-input">
+                                    <input class="form-control" name="message" placeholder="Type your message here..." type="text" id="copy-input" value="">
                                     <button type="submit" id="submit" class="btn btn-icon  btn-primary brround" ><i class="fa fa-paper-plane-o"></i></button>
                                     
                                     <!-- GLOBAL-LOADER -->

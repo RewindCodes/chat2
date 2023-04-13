@@ -54,7 +54,7 @@ class UserAuthController extends Controller
          ])){
             return to_route('home');
          }else{
-            return redirect()->back()->with('error', 'not matched');
+            return redirect()->back()->with('error', 'User not found');
          }
 
 

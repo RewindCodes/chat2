@@ -13407,7 +13407,7 @@ div.dataTables_wrapper div.dataTables_filter input {
 #global-loader {
     position: fixed;
     z-index: 50000;
-    background: white;
+    background: rgba(255, 255, 255, 0.5);
     left: 0;
     top: 0;
     right: 0;
