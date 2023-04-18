@@ -34,17 +34,17 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'http://127.0.0.1:8000/google/callback',
+        'redirect' => '${APP_URL}' . '/google/callback',
     ],
     'linkedin' => [
         'client_id' => env('LINKEDIN_CLIENT_ID'),
         'client_secret' => env('LINKEDIN_CLIENT_SECRET'),
-        'redirect' => 'http://127.0.0.1:8000/linkedin/callback',
+        'redirect' => '${APP_URL}' . '/linkedin/callback',
     ],
     'github' => [
         'client_id' => env('GITHUB_CLIENT_ID'),
         'client_secret' => env('GITHUB_CLIENT_SECRET'),
-        'redirect' => 'http://127.0.0.1:8000/github/callback',
+        'redirect' => '${APP_URL}' . '/github/callback',
     ],
 
 ];
