@@ -27,6 +27,9 @@
                                         <div class="main-msg-wrapper copy-div" style="cursor: pointer; background: rgb(92, 92, 92); color:white;">Clear</div>
                                     </div>
                                     @endif
+                                    <div class="text-center">
+                                        <p id="error-message"></p>
+                                    </div>
                                 </div>
                                 {{-- main chat end  --}}
                                 <form action="{{route('chatting')}}" method="POST" id="message-form">
@@ -96,7 +99,12 @@
                         // scroll to the bottom of the main chat body
                         var chatBody = $('#ChatBody');
                         chatBody.scrollTop(chatBody.prop("scrollHeight"));
+                    },
+                    error: function(xhr, status, error) {
+                        // show error/message in a paragraph
+                        $('#error-message').text("Error: " + error);
                     }
+                    
                 });
             });
     
