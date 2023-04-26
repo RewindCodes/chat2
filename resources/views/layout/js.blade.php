@@ -1,42 +1,42 @@
   {{-- JS for Dashboard --}}
     
     <!-- INPUT MASK JS-->
-    <script src="{{ secure_secure_asset('assets/plugins/input-mask/jquery.mask.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/input-mask/jquery.mask.min.js') }}"></script>
 
     <!-- SIDEBAR JS -->
-    <script src="{{ secure_secure_asset('assets/plugins/sidebar/sidebar.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/sidebar/sidebar.js') }}"></script>
 
  
 
     <!-- TypeHead js -->
-    <script src="{{ secure_secure_asset('assets/plugins/bootstrap5-typehead/autocomplete.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/bootstrap5-typehead/autocomplete.js') }}"></script>
     <script src="{{ secure_asset('assets/js/typehead.js') }}"></script>
 
     <!-- GALLERY JS -->
-    <script src="{{ secure_secure_asset('assets/plugins/gallery/picturefill.js') }}"></script>
-    <script src="{{ secure_secure_asset('assets/plugins/gallery/lightgallery.js') }}"></script>
-    <script src="{{ secure_secure_asset('assets/plugins/gallery/lightgallery-1.js') }}"></script>
-    <script src="{{ secure_secure_asset('assets/plugins/gallery/lg-pager.js') }}"></script>
-    <script src="{{ secure_secure_asset('assets/plugins/gallery/lg-autoplay.js') }}"></script>
-    <script src="{{ secure_secure_asset('assets/plugins/gallery/lg-fullscreen.js') }}"></script>
-    <script src="{{ secure_secure_asset('assets/plugins/gallery/lg-zoom.js') }}"></script>
-    <script src="{{ secure_secure_asset('assets/plugins/gallery/lg-hash.js') }}"></script>
-    <script src="{{ secure_secure_asset('assets/plugins/gallery/lg-share.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/gallery/picturefill.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/gallery/lightgallery.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/gallery/lightgallery-1.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/gallery/lg-pager.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/gallery/lg-autoplay.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/gallery/lg-fullscreen.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/gallery/lg-zoom.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/gallery/lg-hash.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/gallery/lg-share.js') }}"></script>
 
     <!-- Perfect SCROLLBAR JS-->
-    <script src="{{ secure_secure_asset('assets/plugins/p-scroll/perfect-scrollbar.js') }}"></script>
-    <script src="{{ secure_secure_asset('assets/plugins/p-scroll/pscroll.js') }}"></script>
-    <script src="{{ secure_secure_asset('assets/plugins/p-scroll/pscroll-1.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/p-scroll/perfect-scrollbar.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/p-scroll/pscroll.js') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/p-scroll/pscroll-1.js') }}"></script>
 
     <!-- Internal Chat js-->
-    <script src="{{ secure_secure_asset('assets/js/chat.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/chat.js') }}"></script>
 
     <!-- Color Theme js -->
-    <script src="{{ secure_secure_asset('assets/js/themeColors.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/themeColors.js') }}"></script>
 
 
     <!-- CUSTOM JS -->
-    <script src="{{ secure_secure_asset('assets/js/custom.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/custom.js') }}"></script>
 
 
 
@@ -45,7 +45,7 @@
     <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
 
     <!-- JQUERY JS -->
-    <script src="{{ secure_secure_asset('assets/js/jquery.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/jquery.min.js') }}"></script>
 
     <!-- BOOTSTRAP JS -->
     <script src="{{ secure_asset('assets/plugins/bootstrap/js/popper.min.js') }}"></script>
