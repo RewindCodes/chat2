@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2deaed673afe7653868445d0d617e4f",
+    "content-hash": "1939d85d04736fa486b0482899d5b6b7",
     "packages": [
         {
             "name": "brick/math",
@@ -3593,16 +3593,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v10.12.1",
+            "version": "v10.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "9e8055d55e8212ad844f48d7cf525b630689be35"
+                "reference": "c88a80fa7f361c2d30d6c81fb71f2bb30be1001f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://repo.huaweicloud.com/repository/php/stripe/stripe-php/v10.12.1/stripe-stripe-php-v10.12.1.zip",
-                "reference": "9e8055d55e8212ad844f48d7cf525b630689be35",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/c88a80fa7f361c2d30d6c81fb71f2bb30be1001f",
+                "reference": "c88a80fa7f361c2d30d6c81fb71f2bb30be1001f",
                 "shasum": ""
             },
             "require": {
@@ -3629,6 +3629,7 @@
                     "Stripe\\": "lib/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3645,7 +3646,11 @@
                 "payment processing",
                 "stripe"
             ],
-            "time": "2023-04-04T19:13:21+00:00"
+            "support": {
+                "issues": "https://github.com/stripe/stripe-php/issues",
+                "source": "https://github.com/stripe/stripe-php/tree/v10.14.0"
+            },
+            "time": "2023-05-25T18:09:32+00:00"
         },
         {
             "name": "symfony/console",
