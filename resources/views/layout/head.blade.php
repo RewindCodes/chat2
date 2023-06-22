@@ -8,23 +8,23 @@
         content="OpenAI chat, ChatGPT, GPT-3, GPT-4">
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/logo/favicon.ico') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ secure_asset('assets/images/logo/favicon.ico') }}" />
 
     <!-- TITLE -->
     <title>Chat2 - Chat with AI</title>
 
     <!-- BOOTSTRAP CSS -->
-    <link id="style" href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link id="style" href="{{ secure_asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
 
     <!-- STYLE CSS -->
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/css/dark-style.css') }}" rel="stylesheet" />
+    <link href="{{ secure_asset('assets/css/style.css') }}" rel="stylesheet" />
+    <link href="{{ secure_asset('assets/css/dark-style.css') }}" rel="stylesheet" />
 
     <!--- FONT-ICONS CSS -->
-    <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet" />
+    <link href="{{ secure_asset('assets/css/icons.css') }}" rel="stylesheet" />
 
     <!-- COLOR SKIN CSS -->
-    <link id="theme" rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/colors/color1.css') }}" />
+    <link id="theme" rel="stylesheet" type="text/css" media="all" href="{{ secure_asset('assets/colors/color1.css') }}" />
 
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

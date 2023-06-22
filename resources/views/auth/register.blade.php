@@ -19,19 +19,19 @@
     <title>Register</title>
 
     <!-- BOOTSTRAP CSS -->
-    <link id="style" href="{{asset('/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
+    <link id="style" href="{{secure_asset('/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
 
     <!-- STYLE CSS -->
-    <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" />
-    <link href="{{asset('assets/css/dark-style.css')}}" rel="stylesheet" />
-    <link href="{{asset('assets/css/transparent-style.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/css/skin-modes.css')}}" rel="stylesheet" />
+    <link href="{{secure_asset('assets/css/style.css')}}" rel="stylesheet" />
+    <link href="{{secure_asset('assets/css/dark-style.css')}}" rel="stylesheet" />
+    <link href="{{secure_asset('assets/css/transparent-style.css')}}" rel="stylesheet">
+    <link href="{{secure_asset('assets/css/skin-modes.css')}}" rel="stylesheet" />
 
     <!--- FONT-ICONS CSS -->
-    <link href="{{asset('assets/css/icons.css')}}" rel="stylesheet" />
+    <link href="{{secure_asset('assets/css/icons.css')}}" rel="stylesheet" />
 
     <!-- COLOR SKIN CSS -->
-    <link id="theme" rel="stylesheet" type="text/css" media="all" href="{{asset('/assets/colors/color1.css')}}" />
+    <link id="theme" rel="stylesheet" type="text/css" media="all" href="{{secure_asset('/assets/colors/color1.css')}}" />
 
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +52,7 @@
                 <!-- CONTAINER OPEN -->
                 <div class="col col-login mx-auto mt-7">
                     <div class="text-center">
-                        <a href="{{ route('home') }}"><img src="{{asset('assets/images/logo/logo.png')}}" style="width: 66px" class="header-brand-img m-0" alt=""></a>
+                        <a href="{{ route('home') }}"><img src="{{secure_asset('assets/images/logo/logo.png')}}" style="width: 66px" class="header-brand-img m-0" alt=""></a>
                     </div>
                 </div>
                 <div class="container-login100">
@@ -122,23 +122,23 @@
     <!-- BACKGROUND-IMAGE CLOSED -->
 
     <!-- JQUERY JS -->
-    <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+    <script src="{{secure_asset('assets/js/jquery.min.js')}}"></script>
 
     <!-- BOOTSTRAP JS -->
-    <script src="{{asset('assets/plugins/bootstrap/js/popper.min.js')}}"></script>
-    <script src="{{asset('assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{secure_asset('assets/plugins/bootstrap/js/popper.min.js')}}"></script>
+    <script src="{{secure_asset('assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
 
     <!-- SHOW PASSWORD JS -->
-    <script src="{{asset('assets/js/show-password.min.js')}}"></script>
+    <script src="{{secure_asset('assets/js/show-password.min.js')}}"></script>
 
     <!-- Perfect SCROLLBAR JS-->
-    <script src="{{asset('assets/plugins/p-scroll/perfect-scrollbar.js')}}"></script>
+    <script src="{{secure_asset('assets/plugins/p-scroll/perfect-scrollbar.js')}}"></script>
 
     <!-- Color Theme js -->
-    <script src="{{asset('assets/js/themeColors.js')}}"></script>
+    <script src="{{secure_asset('assets/js/themeColors.js')}}"></script>
 
     <!-- CUSTOM JS -->
-    <script src="{{asset('assets/js/custom.js')}}"></script>
+    <script src="{{secure_asset('assets/js/custom.js')}}"></script>
 
 
 </body>
